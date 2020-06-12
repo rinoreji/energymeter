@@ -1,4 +1,12 @@
 
-<h2>WIP</h2>
+<form [formGroup]="formGrp">
+  <label>
+    Units:
+    <input type="text" formControlName="units">
+  </label>
+  <p>
+    Cost: {{cost$ | async}}
+  </p>
+</form>
 
 <router-outlet></router-outlet>
