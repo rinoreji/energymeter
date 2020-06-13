@@ -1,20 +1,31 @@
-<form [formGroup]="formGrp">
-  <label>
-    Units:
-    <input type="number" formControlName="units">
-  </label>
+<mat-toolbar color="primary">
+  <span>{{title}}</span>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+
+  <!-- <span>Right Aligned Text</span> -->
+</mat-toolbar>
+
+
+<form [formGroup]="formGrp" class="page-margin">
+  <mat-form-field class="example-full-width">
+    <mat-label>Units</mat-label>
+    <input type="number" matInput placeholder="Units" formControlName="units">
+  </mat-form-field>
   <p>
     Slab: {{slab}}
   </p>
   <p>
-    Cost: {{cost}}
+    Cost: &#x20B9;{{cost | number:'1.2-2'}}
   </p>
   <p>
-    Fixed: {{fixed}}
+    Fixed: &#x20B9;{{fixed | number:'1.2-2'}}
   </p>
   <p>
-    Total: {{total}}
+    Total: &#x20B9;{{total | number:'1.2-2'}}
   </p>
 </form>
+
 
 <router-outlet></router-outlet>

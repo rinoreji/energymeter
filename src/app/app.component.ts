@@ -39,10 +39,10 @@ export class AppComponent {
   title = 'Energy meter';
   formGrp: FormGroup;
 
-  cost: number;
-  fixed: number;
-  slab: string;
-  total: number;
+  cost = 0;
+  fixed = 0;
+  slab = '';
+  total = 0;
 
   constructor() {
     this.initForm();
@@ -53,7 +53,7 @@ export class AppComponent {
       units: new FormControl('')
     });
     this.formGrp.get('units').valueChanges.subscribe(v => {
-      console.log('Cost:', this.getNonTelescopicRate(v), 'fixed', this.getFixedCharges(v));
+      //console.log('Cost:', this.getNonTelescopicRate(v), 'fixed', this.getFixedCharges(v));
       this.calculate(v);
     });
   }
