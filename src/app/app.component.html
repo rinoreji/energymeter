@@ -1,11 +1,19 @@
-
 <form [formGroup]="formGrp">
   <label>
     Units:
-    <input type="text" formControlName="units">
+    <input type="number" formControlName="units">
   </label>
   <p>
-    Cost: {{cost$ | async}}
+    Slab: {{slab}}
+  </p>
+  <p>
+    Cost: {{cost}}
+  </p>
+  <p>
+    Fixed: {{fixed}}
+  </p>
+  <p>
+    Total: {{total}}
   </p>
 </form>
 
